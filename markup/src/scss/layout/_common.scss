@@ -1,0 +1,67 @@
+#wrapper{}
+
+#main{
+	background:url('images/decor01.png') no-repeat 100% 100%;
+	position:relative;
+	z-index:1;
+}
+
+.container{
+	margin:0 auto;
+	max-width: 1000px;
+	padding-right: $gap/2;
+	padding-left: $gap/2;
+}
+
+.section-try{
+	color:$white;
+	position:relative;
+	> .container{
+		position:relative;
+		z-index:10;
+	}
+	.bg{
+		background-position:50% 50%;
+		background-repeat:no-repeat;
+		background-size:cover;
+		height:100%;
+		left:0;
+		position:absolute;
+		top:0;
+		width:100%;
+		z-index:1;
+	}
+}
+
+.section-program{
+	h2{
+		margin:0 0 10px;
+	}
+	h3{
+		margin:0 0 10px;
+	}
+}
+
+.program-list{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+	margin:0 -#{$gap}/2;
+	@extend %listreset;
+	> li{
+		padding:12px $gap/2;
+		width:50%;
+	}
+}
+
+.program-tile{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+}
