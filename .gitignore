@@ -1,0 +1,5 @@
+inpu/
+markup/dist
+markup/node_modules
+*.rar
+*.bat
