@@ -3,98 +3,167 @@ extends pug/extends/master
 block content
 	section.section-try
 		.container
-			h1 Just Balance your Mind &amp; Body
-			p Just Balance your Mind &amp; Body 
-			form(action="#")
-				h2 Trial Class
-				.form-group
-					input(type="text", placeholder="Enter your name")
-				.form-group
-					input(type="tel", placeholder="Enter your phone")
-				.form-group
-					select
-						option.default Chose your class
-						option 1
-						option 2
-						option 3
-						option 4
-						option 5
-				.form-group.submit-holder
-					input(type="submit", value="Try it")
+			div
+				h1 Just Balance your Mind &amp; Body
+				p Just Balance your Mind &amp; Body 
+			div
+				form(action="#").form-subscribe
+					h3 Trial Class
+					.form-group
+						input(type="text", placeholder="Enter your name", required)
+					.form-group
+						input(type="tel", placeholder="Enter your phone", required)
+					.form-group
+						select(required)
+							option.default Chose your class
+							option 1
+							option 2
+							option 3
+							option 4
+							option 5
+					.form-group.submit-holder
+						input(type="submit", value="Try it")
 		.bg(style="background-image:url(images/banner01.jpg)")
 	section.section-program
 		.container
-			h2 Yoga FEATURE PROGRAM
-			h3 Our Classes
+			.section-heading
+				h2 Yoga FEATURE PROGRAM
+				h3 Our Classes
 			ul.program-list
 				li
 					.program-tile
 						.image-holder
-							img(src="images/img01", alt="Image description", width="270", height="300")
+							a(href="#")
+								img(src="images/img01.jpg", alt="Image description", width="270", height="300")
 						.text
-							h4 Yoga For Health
+							h4
+								a(href="#") Yoga For Health
 							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 							a.category(href="#") Ashtanga - Hatha
 				li
 					.program-tile
 						.image-holder
-							img(src="images/img02", alt="Image description", width="270", height="300")
+							a(href="#")
+								img(src="images/img02.jpg", alt="Image description", width="270", height="300")
 						.text
-							h4 Yoga For Lose Weight
+							h4
+								a(href="#") Yoga For Lose Weight
+							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 							a.category(href="#") Ashtanga - Hatha
 				li
 					.program-tile
 						.image-holder
-							img(src="images/img03", alt="Image description", width="270", height="300")
+							a(href="#")
+								img(src="images/img03.jpg", alt="Image description", width="270", height="300")
 						.text
-							h4 Yoga For Children
+							h4
+								a(href="#") Yoga For Children
 							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 							a.category(href="#") Ashtanga - Hatha
 				li
 					.program-tile
 						.image-holder
-							img(src="images/img04", alt="Image description", width="270", height="300")
+							a(href="#")
+								img(src="images/img04.jpg", alt="Image description", width="270", height="300")
 						.text
-							h4 Yoga For Elderly
+							h4
+								a(href="#") Yoga For Elderly
 							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 							a.category(href="#") Ashtanga - Hatha
-	section
-		.container
+	section.section-gallery
+		.container.fluid
 			ul
 				li
-					img(src="images/img05.jpg", alt="Image description", width="70", height="70").icon
-					h4 Improved overall health
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img05.jpg", alt="Image description", width="479", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img06.jpg", alt="Image description", width="70", height="70").icon
-					h4 INCREASED CONCENTRATION
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img06.jpg", alt="Image description", width="481", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img07.jpg", alt="Image description", width="70", height="70").icon
-					h4 BLANCE YOUR MIND
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img07.jpg", alt="Image description", width="480", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img08.jpg", alt="Image description", width="70", height="70").icon
-					h4 SLEEP BETTER
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img08.jpg", alt="Image description", width="480", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img09.jpg", alt="Image description", width="70", height="70").icon
-					h4 WEIGHT LOSS
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img09.jpg", alt="Image description", width="480", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img10.jpg", alt="Image description", width="70", height="70").icon
-					h4 STRENGTHENS YOUR BONES
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img10.jpg", alt="Image description", width="481", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img11.jpg", alt="Image description", width="70", height="70").icon
-					h4 INCREASED FLEXIBILITY
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					.gallery-tile
+						img(src="images/img11.jpg", alt="Image description", width="481", height="350")
+						a(href="#").hover
+							span.icon-zoom
 				li
-					img(src="images/img12.jpg", alt="Image description", width="70", height="70").icon
-					h4 LOWER BLOOD PRESSURE
-					p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
-		.bg(style="background-image:url(images/banner02.jpg)")
+					.gallery-tile
+						img(src="images/img12.jpg", alt="Image description", width="480", height="350")
+						a(href="#").hover
+							span.icon-zoom
+	section.section-about
+		.subsection-gallery
+			.container
+				div
+					h2 About us
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor it in lorei voluptate velit esse cillum dolore eu fugiat nulla pariatur lorem ispum loting sokui.
+				div
+					.slider-images.js-slick-slider-images
+						div
+							img(src="images/img13.jpg", alt="Image description", width="570", height="300")
+						div
+							img(src="images/img13.jpg", alt="Image description", width="570", height="300")
+						div
+							img(src="images/img13.jpg", alt="Image description", width="570", height="300")
+		.subsection-list
+			.container
+				ul
+					li
+						img(src="images/icon01.png", alt="Image description", width="70", height="70").icon
+						h4 Improved overall health
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon02.png", alt="Image description", width="70", height="70").icon
+						h4 INCREASED CONCENTRATION
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon03.png", alt="Image description", width="70", height="70").icon
+						h4 BLANCE YOUR MIND
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon04.png", alt="Image description", width="70", height="70").icon
+						h4 SLEEP BETTER
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon05.png", alt="Image description", width="70", height="70").icon
+						h4 WEIGHT LOSS
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon06.png", alt="Image description", width="70", height="70").icon
+						h4 STRENGTHENS YOUR BONES
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon07.png", alt="Image description", width="70", height="70").icon
+						h4 INCREASED FLEXIBILITY
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+					li
+						img(src="images/icon08.png", alt="Image description", width="70", height="70").icon
+						h4 LOWER BLOOD PRESSURE
+						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
+			.bg(style="background-image:url(images/banner02.jpg)")
 	section.section-plan
 		.container
 			ul.plan-list

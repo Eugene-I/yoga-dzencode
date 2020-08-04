@@ -3,13 +3,19 @@
 // Color names - http://name-of-color.com/
 
 // $gray: #999;
-// $black: #000;
-$white: #fff;
-$brand-primary: #5b6ceb;
-$brand2: #5363d8;
+$black:				#000;
+$white:				#fff;
+$brand-primary:		#5b6ceb;
+// $brand2:			#5363d8;
+$gray:				#888;
+$gray2:				#f2f2f2;
+$gray3:				#777;
+$gray4:				#999;
+
 // $light-blue: #39f;
 
 $base-font-sans-serif: 'Open Sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-sans-serif-calligraphic: 'FreeStyle Script', 'Open Sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 // $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
@@ -30,12 +36,12 @@ $gap: 30px;
 // $trim-big: 30px;
 
 $base-min-width: 320px;
-// $max-content-width: 1140px;
-// $max-container-width: $trim + $max-content-width + $trim;
+$max-content-width: 1212px;
+$max-container-width: $max-content-width + $gap*2;
 
 // Links
-// $base-link-color: $light-blue;
-// $base-link-hover-color: $black;
+$base-link-color: $brand-primary;
+$base-link-hover-color: #475bf1;
 
 // Buttons 
 // $btn-color: $white !default;
@@ -44,22 +50,24 @@ $base-min-width: 320px;
 // $btn-font-size: inherit !default;
 
 // Forms
-// $form-element-padding: 9px 10px !default;
-// $form-element-background: $white !default;
-// $form-element-border-color: $gray !default;
+$form-element-background:		$gray2;
+$form-element-padding:			14px 10px 15px !default;
+$form-element-border-color:		$form-element-background;
 // $form-element-focus-border-color: $black !default;
-// $placeholder-color: $gray !default;
+$placeholder-color:				$gray !default;
 
 // Headers
-// $h1-font-size: 30px !default;
-// $h2-font-size: 27px !default;
-// $h3-font-size: 24px !default;
-// $h4-font-size: 21px !default;
+$h1-font-size: 48px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 41px !default;
+$h4-font-size: 20px !default;
 // $h5-font-size: 17px !default;
 // $h6-font-size: 15px !default;
 
-// $headings-font-family: inherit !default;
-// $headings-color: inherit !default;
+$headings-font-family:			inherit !default;
+$headings-color:				$brand-primary;
 
 
 // $animation-speed: 0.3s;
+
+$border-radius-base: 8px;

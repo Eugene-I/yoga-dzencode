@@ -14,3 +14,7 @@
 	text-overflow: ellipsis; /* 2 */
 	overflow: hidden;
 }
+
+%icons-sprite{
+	background:url('images/icons-sprite.png') no-repeat -9999px -9999px;
+}

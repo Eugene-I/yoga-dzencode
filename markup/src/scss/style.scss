@@ -21,14 +21,18 @@ $media-expressions: (
 
 @import 'vendors/include-media';
 @import 'vendors/normalize';
+@import 'vendors/slick-slider/_slick.scss';
 
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/helpers';
 @import 'base/reset';
-// @import 'base/typography';
+@import 'base/typography';
 @import 'base/fonts-and-icons';
-// @import 'base/forms';
+@import 'base/buttons';
+@import 'base/forms';
+
+@import 'layout/boxes';
 
 @import 'layout/header';
 @import 'layout/common';

@@ -1,0 +1,157 @@
+.program-tile{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+}
+
+.form-subscribe{
+	background:$white;
+	border-radius: 20px;
+	box-shadow:8px 8px 10px rgba($black, 0.2);
+	color:$gray;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	padding:10px 15px 20px;
+	h3{
+		color:$brand-primary;
+		font-family: inherit;
+		font-size: 26px;
+		font-weight:bold;
+		margin:0 0 10px;
+		text-transform:none;
+	}
+}
+
+.program-tile{
+	box-shadow: 5px 5px 20px rgba($black, 0.1);
+	border-radius: $border-radius-base;
+	height:100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	overflow:hidden;
+	.image-holder{
+		max-width:270px;
+		min-width:270px;
+		position:relative;
+		img{
+			object-fit: cover;
+			height:100%;
+			width:100%;
+		}
+	}
+	.text{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: stretch;
+		padding:10px 15px;
+	}
+	h4{
+		margin:0 0 10px;
+	}
+	p{
+		margin:0 0 10px;
+	}
+	.category{
+		color:$gray4;
+		&:hover {
+			color:$base-link-hover-color;
+		}
+	}
+}
+
+.gallery-tile{
+	height:350px;
+	position:relative;
+	&:hover {
+		.hover{
+			opacity:1;
+		}
+	}
+	img{
+		object-fit: cover;
+		height:100%;
+		width:100%;
+	}
+	.hover{
+		background:rgba($brand-primary, 0.8);
+		height:100%;
+		left:0;
+		opacity:0;
+		position:absolute;
+		top:0;
+		width:100%;
+		z-index:10;
+	}
+	.icon-zoom{
+		background:$white;
+		border-radius:100%;
+		height:57px;
+		width:57px;
+		&,
+		&:before {
+			left:50%;
+			position:absolute;
+			top:50%;
+			transform:translate(-50%, -50%);
+		}
+		&:before {
+			background-position:0 0;
+			content: '';
+			height:24px;
+			width:24px;
+			@extend %icons-sprite;
+		}
+	}
+}
+
+.slider-images{
+	max-width: 570px;
+	// overflow:hidden;
+	position:relative;
+	.slick-list{
+		border-radius: $border-radius-base;
+		box-shadow: 6px 6px 15px rgba($black, 0.15);
+		overflow:hidden;
+		z-index:1;
+	}
+	.slick-arrow{
+		background: $white;
+		box-shadow: 9px 9px 9px rgba($black, 0.05);
+		border: 0;
+		border-radius:100%;
+		height:50px;
+		left:0;
+		padding:0;
+		position:absolute;
+		top:50%;
+		transform:translate(-50%, -50%);
+		width:50px;
+		z-index:10;
+		&.slick-next {
+			left:100%;
+			&:before {
+				background-position:0 -60px;
+			}
+		}
+		&:before {
+			background-position:0 -30px;
+			content:'';
+			height:19px;
+			left:50%;
+			position:absolute;
+			top:50%;
+			transform:translate(-50%, -50%);
+			width:12px;
+			@extend %icons-sprite;
+		}
+	}
+}
