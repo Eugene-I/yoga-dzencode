@@ -1,12 +1,12 @@
 .btn{
 	border: 1px solid transparent;
-	border-radius:$border-radius-base;
+	border-radius:20px;
 	display:inline-block;
 	vertical-align:top;
-	font-size:16px;
-	font-weight:bold;
-	line-height:1.25;
-	padding:10px 15px 20px;
+	font-size:18px;
+	font-weight:600;
+	line-height:1.2222;
+	padding:11px 46px 15px;
 }
 
 .btn-primary{
@@ -16,5 +16,6 @@
 	&:hover {
 		background: $base-link-hover-color;
 		border-color: $base-link-hover-color;
+		color:$white;
 	}
 }

@@ -5,7 +5,7 @@ block content
 		.container
 			div
 				h1 Just Balance your Mind &amp; Body
-				p Just Balance your Mind &amp; Body 
+				p Create the healthy living for yourself
 			div
 				form(action="#").form-subscribe
 					h3 Trial Class
@@ -49,7 +49,7 @@ block content
 							h4
 								a(href="#") Yoga For Lose Weight
 							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-							p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+							//- p Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt.
 							a.category(href="#") Ashtanga - Hatha
 				li
 					.program-tile
@@ -117,10 +117,10 @@ block content
 	section.section-about
 		.subsection-gallery
 			.container
-				div
+				.column.content
 					h2 About us
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor it in lorei voluptate velit esse cillum dolore eu fugiat nulla pariatur lorem ispum loting sokui.
-				div
+				.column.media
 					.slider-images.js-slick-slider-images
 						div
 							img(src="images/img13.jpg", alt="Image description", width="570", height="300")
@@ -141,11 +141,15 @@ block content
 						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
 					li
 						img(src="images/icon03.png", alt="Image description", width="70", height="70").icon
-						h4 BLANCE YOUR MIND
+						h4 BLANCE
+							br
+							| YOUR MIND
 						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
 					li
 						img(src="images/icon04.png", alt="Image description", width="70", height="70").icon
-						h4 SLEEP BETTER
+						h4 SLEEP
+							br
+							| BETTER
 						p Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.
 					li
 						img(src="images/icon05.png", alt="Image description", width="70", height="70").icon
@@ -170,13 +174,17 @@ block content
 				li
 					.plan-box
 						.box-heading
-							| $ 49 /month
+							span.currency $
+							span.value 49 
+							span.period / month
 						.box-content
 							dl
 								dt entry date:
 								dd mon – fri
+							dl
 								dt entry time:
 								dd 8a.m – 8p.m
+							dl
 								dt nutrition advicer:
 								dd no
 						.box-footer
@@ -184,13 +192,17 @@ block content
 				li
 					.plan-box
 						.box-heading
-							| $ 49 /month
+							span.currency $
+							span.value 69 
+							span.period / month
 						.box-content
 							dl
 								dt entry date:
 								dd mon – fri
+							dl
 								dt entry time:
 								dd 8a.m – 8p.m
+							dl
 								dt nutrition advicer:
 								dd no
 						.box-footer
@@ -198,17 +210,53 @@ block content
 				li
 					.plan-box
 						.box-heading
-							| $ 49 /month
+							span.currency $
+							span.value 99 
+							span.period / month
 						.box-content
 							dl
 								dt entry date:
 								dd MON – SUN
+							dl
 								dt entry time:
 								dd 8A.M – 8P.M
+							dl
 								dt nutrition advicer:
 								dd yes
 						.box-footer
 							a(href="#").btn.btn-primary Buy now
 	section.section-feedback
 		.container
-			
+			.slider-feedback.js-slick-slider-feedback
+				.slider-for
+					div
+						.blockquote-holder
+							.image-holder
+								img(src="images/img14.jpg", alt="Image description", width="125", height="125")
+							.content
+								blockquote
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.
+									cite
+										span.position Trainer
+										| Laura Shepard
+					div
+						.blockquote-holder
+							.image-holder
+								img(src="images/img15.jpg", alt="Image description", width="125", height="125")
+							.content
+								blockquote
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.
+									cite
+										span.position Trainer
+										| Sara Taylor
+				.slider-nav
+					div
+						img(src="images/img14.jpg", alt="Image description", width="60", height="60")
+						| Laura Shepard
+						br
+						| Trainer
+					div
+						img(src="images/img15.jpg", alt="Image description", width="60", height="60")
+						| Sara Taylor
+						br
+						| Trainer

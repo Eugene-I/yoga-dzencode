@@ -1,7 +1,27 @@
 jQuery(function() {
 	initHeaderGap();
 	initSlick();
+	initCustomHoverEvent();
 });
+
+function initCustomHoverEvent() {
+	var $box = $('.plan-box'),
+		$button = $box.find('.btn-primary'),
+		hoverClass = 'hover';
+
+	$button.on({
+		'mouseenter': function() {
+						var $current = $(this);
+
+						$current.closest($box).toggleClass(hoverClass);
+					},
+		'mouseleave': function() {
+						var $current = $(this);
+
+						$current.closest($box).toggleClass(hoverClass);
+					}
+	});
+}
 
 function initHeaderGap() {
 	var headerHeight = 0,
@@ -27,6 +47,22 @@ function initSlick() {
 		adaptiveHeight: true,
 		prevArrow: '<button type="button" class="slick-prev"></button>',
 		nextArrow: '<button type="button" class="slick-next"></button>'
+	});
+
+	$('.js-slick-slider-feedback .slider-for').slick({
+		adaptiveHeight: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav'
+	});
+	$('.js-slick-slider-feedback .slider-nav').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev">1</button>',
+		nextArrow: '<button type="button" class="slick-next">2</button>',
+		asNavFor: '.slider-for'
 	});
 }
 
