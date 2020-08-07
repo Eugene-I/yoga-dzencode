@@ -1,11 +1,17 @@
 #wrapper{
-	max-width:1290px;
+	// max-width:1290px;
+	overflow:hidden;
 }
 
 #main{
 	background:url('images/decor01.png') no-repeat 100% 100%;
+	padding:0 0 201px;
 	position:relative;
 	z-index:1;
+	@include media("<desktop") {
+		background-size:75% auto;
+		padding:0 0 100px;
+	}
 }
 
 .container{
@@ -23,6 +29,9 @@
 .section-heading{
 	padding:0 0 56px;
 	text-align:center;
+	@include media("<desktop") {
+		padding:0 0 30px;
+	}
 	h2{
 		margin:0 !important;
 	}
@@ -37,6 +46,12 @@
 	font:40px/1.2 $base-font-sans-serif-calligraphic;
 	padding:100px 0 110px;
 	position:relative;
+	@include media("<desktop") {
+		font-size: 30px;
+	}
+	@include media("<tablet") {
+		padding:20px 0;
+	}
 	> .container{
 		display: flex;
 		flex-direction: row;
@@ -48,9 +63,19 @@
 		// align-items: flex-start;
 		position:relative;
 		z-index:10;
+		@include media("<tablet") {
+			display:block;
+		}
 		> div{
 			padding:0 45px;
 			width:50%;
+			@include media("<desktop") {
+				padding:0 $gap/2;
+			}
+			@include media("<tablet") {
+				padding:0;
+				width:auto;
+			}
 			&:first-child {
 				order:1
 			}
@@ -60,14 +85,27 @@
 		color:inherit;
 		font-family:$base-font-family;
 		margin:0 15px 0 0;
+		@include media("<desktop") {
+			margin:0;
+		}
 	}
 	p{
 		margin:26px 0 0;
 		max-width: 55%;
+		@include media("<desktop") {
+			margin:15px 0 0;
+		}
+		@include media("<tablet") {
+			margin:0 0 20px;
+			max-width: none;
+		}
 	}
 	.form-subscribe{
 		margin:0 0 0 auto;
 		width:300px;
+		@include media("<tablet") {
+			width:100%;
+		}
 	}
 	.bg{
 		background-position:50% 50%;
@@ -79,11 +117,20 @@
 		top:0;
 		width:100%;
 		z-index:1;
+		@include media("<tablet") {
+			background:$brand-primary !important;
+		}
 	}
 }
 
 .section-program{
 	padding:110px 0 125px;
+	@include media("<desktop") {
+		padding:55px 0 60px;
+	}
+	@include media("<tablet") {
+		padding:30px 0;
+	}
 	h2{
 		margin:0 0 10px;
 	}
@@ -105,6 +152,9 @@
 			@extend %listreset;
 			> li{
 				width:25%;
+				@include media("<tablet") {
+					width:50%;
+				}
 			}
 		}
 	}
@@ -119,16 +169,40 @@
 	align-items: stretch;
 	margin:-12px $gap/(-2);
 	@extend %listreset;
+	@include media("<desktop") {
+		margin:-6px $gap/(-3);
+	}
+	// @include media("<tablet") {
+	// 	display:block;
+	// }
 	> li{
 		padding:12px $gap/2;
 		width:50%;
+		@include media("<desktop") {
+			padding:6px $gap/3;
+		}
+		@include media("<tablet") {
+			width:100%;
+		}
 	}
 }
 
 .section-about{
 	padding:125px 0 0;
+	@include media("<desktop") {
+		padding:60px 0 0;
+	}
+	@include media("<tablet") {
+		padding:30px 0 0;
+	}
 	.subsection-gallery{
 		padding:0 0 125px;
+		@include media("<desktop") {
+			padding:0 0 60px;
+		}
+		@include media("<tablet") {
+			padding:0 0 30px;
+		}
 		> .container {
 			display: flex;
 			flex-direction: row;
@@ -138,14 +212,29 @@
 			// align-content: flex-start;
 			align-items: center;
 			// align-items: flex-start;
+			@include media("<tablet") {
+				display:block;
+			}
 		}
 		.column{
 			width:50%;
+			@include media("<tablet") {
+				width:auto;
+			}
 			&.content {
 				padding:0 120px 0 0;
+				@include media("<desktop") {
+					padding-right: $gap/2;
+				}
+				@include media("<tablet") {
+					padding:0;
+				}
 			}
 			&.media {
 				padding:0 0 0 $gap/2;
+				@include media("<tablet") {
+					padding:0;
+				}
 			}
 		}
 	}
@@ -156,6 +245,12 @@
 		padding:125px 0 108px;
 		position:relative;
 		text-align:center;
+		@include media("<desktop") {
+			padding:60px 0 50px;
+		}
+		@include media("<tablet") {
+			padding:30px 0;
+		}
 		> .container{
 			position:relative;
 			z-index:10;
@@ -169,14 +264,26 @@
 			align-items: flex-start;
 			margin:-15px -10px;
 			@extend %listreset;
+			@include media("<desktop") {
+				margin:-10px -5px;
+			}
 			> li{
 				padding:15px;
 				width:25%;
+				@include media("<desktop") {
+					padding:10px;
+				}
+				@include media("<tablet") {
+					width:50%;
+				}
 			}
 		}
 		.icon{
 			display:block;
 			margin:0 auto 27px;
+			@include media("<desktop") {
+				margin-bottom: 15px;
+			}
 		}
 		h4{
 			color:inherit;
@@ -184,9 +291,16 @@
 			line-height:1.5;
 			margin:0 43px 12px;
 			min-height: 54px;
+			@include media("<desktop") {
+				font-size: 16px;
+				margin:0 0 10px;
+			}
 		}
 		p{
 			margin:0 0 25px;
+			@include media("<desktop") {
+				margin:0 0 15px;
+			}
 		}
 		.bg{
 			background-position:50% 50%;
@@ -203,20 +317,35 @@
 }
 
 .section-plan{
-	padding:100px 0 0;
+	padding:100px 0 105px;
+	@include media("<desktop") {
+		padding:50px 0;
+	}
+	@include media("<tablet") {
+		padding:30px 0;
+	}
 }
 
 .plan-list{
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: stretch;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
 	margin: $gap/(-2);
 	@extend %listreset;
+	@include media("<desktop") {
+		margin:-10px;
+	}
 	> li{
 		padding: $gap/2;
 		width:33.3333%;
+		@include media("<desktop") {
+			padding:10px;
+		}
+		@include media("<tablet") {
+			width:100%;
+		}
 	}
 }

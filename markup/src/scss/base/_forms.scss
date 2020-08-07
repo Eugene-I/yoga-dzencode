@@ -11,6 +11,9 @@ fieldset {
 	&.submit-holder {
 		padding-top: 22px;
 		text-align:right;
+		@include media("<tablet") {
+			padding-top: 8px;
+		}
 	}
 }
 
@@ -56,6 +59,7 @@ select {
 	// line-height:50px;
 	padding:$form-element-padding;
 	width:100%;
+	// -webkit-appearance:none;
 	.hideme {
 		display: none;
 	}
@@ -102,4 +106,9 @@ input[type='submit'] {
 	padding-top: 0;
 	padding-bottom: 0;
 	min-width: 169px;
+	@include media("<tablet") {
+		font-size: 14px;
+		line-height:40px;
+		min-width: 130px;
+	}
 }

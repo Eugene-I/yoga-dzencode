@@ -32,8 +32,9 @@ $media-expressions: (
 @import 'base/buttons';
 @import 'base/forms';
 
+@import 'vendors/slick-slider/_slick-override.scss';
 @import 'layout/boxes';
 
 @import 'layout/header';
 @import 'layout/common';
-// @import 'layout/footer';
+@import 'layout/footer';
